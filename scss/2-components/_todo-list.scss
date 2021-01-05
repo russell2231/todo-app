@@ -1,0 +1,214 @@
+.todo-container {
+	margin-top: -115px;
+	padding-bottom: 8rem;
+
+	.create {
+		background-color: hsl(235, 24%, 19%);
+		border-radius: 5px;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+
+		.checkbox {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 1px solid hsl(235, 19%, 35%);
+
+			@include desktop {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.new-todo {
+			background: transparent;
+			border: none;
+			color: hsl(234, 39%, 85%);
+			font-size: 1rem;
+			font-family: $font;
+			width: 85%;
+			margin-left: 1rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		@include desktop {
+			padding: 1rem 2rem;
+		}
+	}
+
+	.todo-list {
+		background-color: hsl(235, 24%, 19%);
+		margin-top: 2rem;
+		border-radius: 5px;
+
+		.item {
+			border-bottom: 1px solid hsl(235, 19%, 35%);
+			padding: 1rem;
+			display: flex;
+			align-items: center;
+
+			.checkbox-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 23px;
+				height: 23px;
+				border-radius: 50%;
+
+				.checkbox {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border: 1px solid hsl(235, 19%, 35%);
+					background: hsl(235, 24%, 19%);
+					cursor: pointer;
+
+					img {
+						display: none;
+					}
+
+					@include desktop {
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+				&:hover {
+					background: linear-gradient(
+						120deg,
+						hsl(192, 100%, 67%),
+						hsl(280, 87%, 65%)
+					);
+				}
+
+				@include desktop {
+					width: 33px;
+					height: 33px;
+				}
+			}
+
+			p {
+				color: hsl(234, 39%, 85%);
+				width: 85%;
+				margin: 0rem 1rem;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+
+				&:hover .close {
+					visibility: visible;
+				}
+			}
+
+			.close {
+				width: 15px;
+				height: 15px;
+				background: url(../../images/icon-cross.svg) no-repeat center/cover;
+				border: none;
+
+				@include desktop {
+					visibility: hidden;
+				}
+			}
+
+			@include desktop {
+				padding: 1rem 2rem;
+			}
+
+			&.complete {
+				.checkbox {
+					background: linear-gradient(
+						120deg,
+						hsl(192, 100%, 67%),
+						hsl(280, 87%, 65%)
+					);
+
+					img {
+						display: initial;
+					}
+				}
+
+				p {
+					color: hsl(233, 14%, 35%);
+					text-decoration: line-through;
+				}
+			}
+		}
+	}
+
+	.stats {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+		background-color: hsl(235, 24%, 19%);
+		position: relative;
+		border-radius: 0 0 5px 5px;
+
+		.filter {
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			left: 0;
+			bottom: -60px;
+			width: 100%;
+			background-color: hsl(235, 24%, 19%);
+			border-radius: 5px;
+			text-align: center;
+
+			p {
+				margin: 1rem;
+				cursor: pointer;
+
+				&:hover {
+					color: hsl(234, 39%, 85%);
+				}
+
+				&.selected {
+					color: hsl(220, 98%, 61%);
+				}
+			}
+
+			@include desktop {
+				position: static;
+				width: 50%;
+			}
+		}
+
+		.clear {
+			p {
+				cursor: pointer;
+
+				&:hover {
+					color: hsl(234, 39%, 85%);
+				}
+			}
+		}
+
+		p {
+			margin: 0;
+			color: hsl(233, 14%, 35%);
+		}
+
+		@include desktop {
+			align-items: center;
+		}
+	}
+
+	@include desktop {
+		margin-top: -150px;
+	}
+}
+
+.drag {
+	color: hsl(233, 14%, 35%);
+	text-align: center;
+}

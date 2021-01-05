@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 1440px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+body {
+  background-color: #161722;
+}
+
+main {
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 50%;
+  }
+}
+
+footer {
+  color: #4d5066;
+}
+
+header {
+  background: url(../../images/bg-mobile-dark.jpg) no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  height: 30vh;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 4rem;
+}
+
+header .container h1 {
+  color: #fff;
+}
+
+header .container .theme-toggle {
+  width: 30px;
+  height: 30px;
+  background: url(../../images/icon-sun.svg) no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  border: none;
+}
+
+@media (min-width: 1440px) {
+  header .container {
+    padding-top: 10rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    background: url(../../images/bg-desktop-dark.jpg) no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 500px;
+  }
+}
+
+.todo-container {
+  margin-top: -115px;
+  padding-bottom: 8rem;
+}
+
+.todo-container .create {
+  background-color: #25273c;
+  border-radius: 5px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-container .create .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #484b6a;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .create .checkbox {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.todo-container .create .new-todo {
+  background: transparent;
+  border: none;
+  color: #cacde8;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  width: 85%;
+  margin-left: 1rem;
+}
+
+.todo-container .create .new-todo:focus {
+  outline: none;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .create {
+    padding: 1rem 2rem;
+  }
+}
+
+.todo-container .todo-list {
+  background-color: #25273c;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.todo-container .todo-list .item {
+  border-bottom: 1px solid #484b6a;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-container .todo-list .item .checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+.todo-container .todo-list .item .checkbox-container .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #484b6a;
+  background: #25273c;
+  cursor: pointer;
+}
+
+.todo-container .todo-list .item .checkbox-container .checkbox img {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .todo-list .item .checkbox-container .checkbox {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.todo-container .todo-list .item .checkbox-container:hover {
+  background: linear-gradient(120deg, #57ddff, #c058f3);
+}
+
+@media (min-width: 1440px) {
+  .todo-container .todo-list .item .checkbox-container {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.todo-container .todo-list .item p {
+  color: #cacde8;
+  width: 85%;
+  margin: 0rem 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.todo-container .todo-list .item p:hover .close {
+  visibility: visible;
+}
+
+.todo-container .todo-list .item .close {
+  width: 15px;
+  height: 15px;
+  background: url(../../images/icon-cross.svg) no-repeat center/cover;
+  border: none;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .todo-list .item .close {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  .todo-container .todo-list .item {
+    padding: 1rem 2rem;
+  }
+}
+
+.todo-container .todo-list .item.complete .checkbox {
+  background: linear-gradient(120deg, #57ddff, #c058f3);
+}
+
+.todo-container .todo-list .item.complete .checkbox img {
+  display: initial;
+}
+
+.todo-container .todo-list .item.complete p {
+  color: #4d5066;
+  text-decoration: line-through;
+}
+
+.todo-container .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background-color: #25273c;
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+
+.todo-container .stats .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100%;
+  background-color: #25273c;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.todo-container .stats .filter p {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.todo-container .stats .filter p:hover {
+  color: #cacde8;
+}
+
+.todo-container .stats .filter p.selected {
+  color: #3a7bfd;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .stats .filter {
+    position: static;
+    width: 50%;
+  }
+}
+
+.todo-container .stats .clear p {
+  cursor: pointer;
+}
+
+.todo-container .stats .clear p:hover {
+  color: #cacde8;
+}
+
+.todo-container .stats p {
+  margin: 0;
+  color: #4d5066;
+}
+
+@media (min-width: 1440px) {
+  .todo-container .stats {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .todo-container {
+    margin-top: -150px;
+  }
+}
+
+.drag {
+  color: #4d5066;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

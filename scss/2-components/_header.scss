@@ -1,0 +1,36 @@
+header {
+	background: url(../../images/bg-mobile-dark.jpg) no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	height: 30vh;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 4rem;
+
+		h1 {
+			color: #fff;
+		}
+
+		.theme-toggle {
+			width: 30px;
+			height: 30px;
+			background: url(../../images/icon-sun.svg) no-repeat;
+			background-position: 0 0;
+			background-size: cover;
+			border: none;
+		}
+
+		@include desktop {
+			padding-top: 10rem;
+		}
+	}
+
+	@include desktop {
+		background: url(../../images/bg-desktop-dark.jpg) no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+		height: 500px;
+	}
+}
