@@ -1,6 +1,6 @@
 .todo-container {
-	margin-top: -115px;
-	padding-bottom: 8rem;
+	margin-top: -90px;
+	box-shadow: 2px 6px 12px rgba($color: hsl(235, 24%, 19%), $alpha: 0.1);
 
 	.create {
 		background-color: hsl(235, 24%, 19%);
@@ -21,42 +21,59 @@
 			}
 		}
 
-		.new-todo {
-			background: transparent;
-			border: none;
-			color: hsl(234, 39%, 85%);
-			font-size: 1rem;
-			font-family: $font;
+		form {
 			width: 85%;
-			margin-left: 1rem;
 
-			&:focus {
-				outline: none;
+			.new-todo {
+				background: transparent;
+				border: none;
+				color: hsl(234, 39%, 85%);
+				font-size: 1rem;
+				font-family: $font;
+				width: 100%;
+				margin-left: 1rem;
+
+				&::placeholder {
+					color: hsl(233, 14%, 35%);
+				}
+
+				&:focus {
+					outline: none;
+				}
+
+				@include desktop {
+					margin-left: 0;
+				}
+			}
+
+			@include desktop {
+				padding: 1rem 2rem;
 			}
 		}
 
 		@include desktop {
-			padding: 1rem 2rem;
+			padding: 0.5rem 2rem;
 		}
 	}
 
 	.todo-list {
 		background-color: hsl(235, 24%, 19%);
-		margin-top: 2rem;
+		margin-top: 1rem;
 		border-radius: 5px;
 
 		.item {
-			border-bottom: 1px solid hsl(235, 19%, 35%);
+			border-bottom: 1px solid hsl(237, 14%, 26%);
 			padding: 1rem;
 			display: flex;
 			align-items: center;
+			cursor: pointer;
 
 			.checkbox-container {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 23px;
-				height: 23px;
+				width: 22px;
+				height: 22px;
 				border-radius: 50%;
 
 				.checkbox {
@@ -89,8 +106,8 @@
 				}
 
 				@include desktop {
-					width: 33px;
-					height: 33px;
+					width: 32px;
+					height: 32px;
 				}
 			}
 
@@ -98,15 +115,10 @@
 				color: hsl(234, 39%, 85%);
 				width: 85%;
 				margin: 0rem 1rem;
-				cursor: pointer;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				width: 100%;
-
-				&:hover .close {
-					visibility: visible;
-				}
 			}
 
 			.close {
@@ -139,6 +151,10 @@
 					text-decoration: line-through;
 				}
 			}
+
+			&:hover .close {
+				visibility: visible;
+			}
 		}
 	}
 
@@ -149,6 +165,11 @@
 		background-color: hsl(235, 24%, 19%);
 		position: relative;
 		border-radius: 0 0 5px 5px;
+
+		p {
+			margin: 0;
+			color: hsl(233, 14%, 35%);
+		}
 
 		.filter {
 			display: flex;
@@ -164,9 +185,10 @@
 			p {
 				margin: 1rem;
 				cursor: pointer;
+				font-weight: 700;
 
 				&:hover {
-					color: hsl(234, 39%, 85%);
+					color: hsl(236, 33%, 92%);
 				}
 
 				&.selected {
@@ -185,14 +207,9 @@
 				cursor: pointer;
 
 				&:hover {
-					color: hsl(234, 39%, 85%);
+					color: hsl(236, 33%, 92%);
 				}
 			}
-		}
-
-		p {
-			margin: 0;
-			color: hsl(233, 14%, 35%);
 		}
 
 		@include desktop {
