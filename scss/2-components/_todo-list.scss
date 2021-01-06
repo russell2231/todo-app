@@ -126,11 +126,8 @@
 
 			&.complete {
 				.checkbox {
-					background: linear-gradient(
-						120deg,
-						hsl(192, 100%, 67%),
-						hsl(280, 87%, 65%)
-					);
+					background: url(../../images/icon-check.svg) no-repeat center,
+						linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
 					img {
 						display: initial;

@@ -269,7 +269,7 @@ header .container .theme-toggle {
 }
 
 .todo-container .todo-list .item.complete .checkbox {
-  background: linear-gradient(120deg, #57ddff, #c058f3);
+  background: url(../../images/icon-check.svg) no-repeat center, linear-gradient(120deg, #57ddff, #c058f3);
 }
 
 .todo-container .todo-list .item.complete .checkbox img {
