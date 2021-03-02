@@ -1,0 +1,59 @@
+body.dark {
+	background: #151620;
+
+	.header {
+		background: url(../images/bg-mobile-dark.jpg) no-repeat;
+		background-size: cover;
+
+		@include desktop {
+			background: url(../images/bg-desktop-dark.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		.theme-toggle {
+			background: url(../images/icon-sun.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.list-item {
+		background: #25273d;
+
+		.checkbox {
+			background: #393a4b;
+
+			.check {
+				background: #25273d;
+			}
+		}
+	}
+
+	.new-todo {
+		color: #c8cbe7;
+
+		&::placeholder {
+			color: #767992;
+		}
+	}
+
+	.list {
+		.list-item {
+			border-color: #393a4b;
+
+			&.done {
+				.text {
+					color: #767992;
+				}
+			}
+
+			.text {
+				color: #c8cbe7;
+			}
+		}
+	}
+
+	.list-options,
+	.list-filter {
+		color: #5b5e7e;
+	}
+}

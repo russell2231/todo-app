@@ -1,0 +1,44 @@
+body.light {
+	background: #fff;
+
+	.header {
+		background: url(../images/bg-mobile-light.jpg) no-repeat;
+		background-size: cover;
+
+		@include desktop {
+			background: url(../images/bg-desktop-light.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		.theme-toggle {
+			background: url(../images/icon-moon.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.list-item {
+		background: #fff;
+
+		.checkbox {
+			background: #e3e4f1;
+
+			.check {
+				background: #fff;
+			}
+		}
+	}
+
+	.new-todo {
+		color: #393a4b;
+	}
+
+	.list {
+		.list-item {
+			border-color: #e3e4f1;
+		}
+	}
+
+	.list-options {
+		color: #9495a5;
+	}
+}

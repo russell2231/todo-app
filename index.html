@@ -13,13 +13,79 @@
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
-	<body>
-		<header class="light">
+	<body class="dark">
+		<header class="header">
 			<div class="container">
 				<h1>Todo</h1>
 				<div class="theme-toggle"></div>
 			</div>
 		</header>
+
+		<main>
+			<div class="container">
+				<div class="todo-list">
+					<div class="list-item">
+						<div class="item">
+							<div class="checkbox">
+								<div class="check"></div>
+							</div>
+							<form>
+								<input
+									class="new-todo"
+									type="text"
+									placeholder="Create a new todo..."
+								/>
+							</form>
+						</div>
+					</div>
+
+					<ul class="list">
+						<li class="list-item done">
+							<div class="item">
+								<div class="checkbox">
+									<div class="check"></div>
+								</div>
+								<span class="text">Complete online JavaScript course</span>
+							</div>
+
+							<img class="close" src="images/icon-cross.svg" alt="" />
+						</li>
+						<li class="list-item">
+							<div class="item">
+								<div class="checkbox">
+									<div class="check"></div>
+								</div>
+								<span class="text">Complete online JavaScript course</span>
+							</div>
+
+							<img class="close" src="images/icon-cross.svg" alt="" />
+						</li>
+						<li class="list-item">
+							<div class="item">
+								<div class="checkbox">
+									<div class="check"></div>
+								</div>
+								<span class="text">Complete online JavaScript course</span>
+							</div>
+
+							<img class="close" src="images/icon-cross.svg" alt="" />
+						</li>
+					</ul>
+					<div class="list-options list-item">
+						<span>5 items left</span>
+						<span>Clear Completed</span>
+					</div>
+
+					<div class="list-filter list-item">
+						<ul class="list">
+							<li class="selected">All</li>
+							<li>Active</li>
+							<li>Completed</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
 		<script src="js/index.js"></script>
 	</body>
 </html>
