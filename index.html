@@ -3,86 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
 		/>
-
-		<title>Frontend Mentor | Todo app</title>
-		<link rel="stylesheet" href="css/main.css" />
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		<title>Russell | Todo app</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<header>
+		<header class="light">
 			<div class="container">
 				<h1>Todo</h1>
-				<button class="theme-toggle"></button>
+				<div class="theme-toggle"></div>
 			</div>
 		</header>
-
-		<main>
-			<div class="container">
-				<div class="todo-container">
-					<div class="create">
-						<div class="checkbox"></div>
-						<form>
-							<input
-								class="new-todo"
-								type="text"
-								placeholder="Create a new todo..."
-							/>
-						</form>
-					</div>
-
-					<div class="todo-list">
-						<div class="item complete">
-							<div class="checkbox-container">
-								<div class="checkbox"></div>
-							</div>
-							<p>
-								Complete online JavaScript course
-								<button class="close"></button>
-							</p>
-						</div>
-					</div>
-
-					<div class="stats">
-						<div class="left">
-							<p><span class="number">0</span> items left</p>
-						</div>
-
-						<div class="filter">
-							<p class="selected">All</p>
-							<p>Active</p>
-							<p>Completed</p>
-						</div>
-
-						<div class="clear">
-							<p>Clear Completed</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-
-		<footer>
-			<p class="drag">Drag and drop to reorder list</p>
-		</footer>
-
-		<script src="app.js"></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
