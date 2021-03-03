@@ -11,6 +11,10 @@ body {
 	overflow-x: hidden;
 }
 
+body {
+	transition: background 1s;
+}
+
 h1 {
 	margin: 0;
 }

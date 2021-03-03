@@ -12,6 +12,7 @@
 		justify-content: space-between;
 		padding: 1.4rem 2rem;
 		border-radius: 5px;
+		transition: background 1s;
 
 		@include desktop {
 			padding: 2rem 2.4rem;
@@ -43,6 +44,7 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+				transition: background 1s;
 
 				@include desktop {
 					width: 23px;
@@ -84,6 +86,7 @@
 		.list-item {
 			border-bottom: 1px solid;
 			border-radius: 0;
+			transition: border 1s;
 
 			@include desktop {
 				&:hover .close {
@@ -185,6 +188,10 @@
 
 			.selected {
 				color: #3a7cfd;
+			}
+
+			li {
+				cursor: pointer;
 			}
 		}
 	}

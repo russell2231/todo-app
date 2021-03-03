@@ -1,6 +1,7 @@
 .header {
 	height: 200px;
 	padding-top: 4.8rem;
+	transition: background 1s;
 
 	@include desktop {
 		height: 300px;
@@ -10,6 +11,7 @@
 	.theme-toggle {
 		width: 30px;
 		height: 30px;
+		cursor: pointer;
 	}
 
 	.container {
