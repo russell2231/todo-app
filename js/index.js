@@ -2,7 +2,11 @@ const body = document.querySelector('body');
 const themeToggleBtn = document.querySelector('.theme-toggle');
 const todoForm = document.querySelector('#todoForm');
 const todoList = document.querySelector('.todos');
-const todoListItems = [];
+const todoListItems = localStorage.getItem('todoList')
+	? JSON.parse(localStorage.getItem('todoList'))
+	: [];
+
+// Add Todo
 
 function addTodo(text) {
 	const todo = {
@@ -15,6 +19,8 @@ function addTodo(text) {
 	showTodo(todo);
 }
 
+// Remove Todo
+
 function deleteTodo(key) {
 	const index = todoListItems.findIndex((todo) => todo.id === Number(key));
 	const todo = {
@@ -24,10 +30,13 @@ function deleteTodo(key) {
 
 	todoListItems.splice(index, 1);
 	showTodo(todo);
-	console.log(todoListItems);
 }
 
+// Render Todo
+
 function showTodo(todo) {
+	localStorage.setItem('todoList', JSON.stringify(todoListItems));
+
 	const item = document.querySelector(`[data-key='${todo.id}']`);
 
 	const isCompleted = todo.isCompleted ? 'done' : '';
@@ -58,6 +67,8 @@ function showTodo(todo) {
 	}
 }
 
+// Mark Todo Complete
+
 function toggleComplete(key) {
 	const index = todoListItems.findIndex((todo) => todo.id === Number(key));
 
@@ -78,8 +89,21 @@ function switchTheme() {
 
 // Event Listeners
 
+// Render stored todo list
+document.addEventListener('DOMContentLoaded', () => {
+	const storage = localStorage.getItem('todoList');
+
+	if (storage) {
+		todoListItems.forEach((todo) => {
+			showTodo(todo);
+		});
+	}
+});
+
+// Switch between themes
 themeToggleBtn.addEventListener('click', switchTheme);
 
+// Create todo text
 todoForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
@@ -93,6 +117,7 @@ todoForm.addEventListener('submit', (e) => {
 	}
 });
 
+// Mark complete or delete todo
 todoList.addEventListener('click', (e) => {
 	if (e.target.classList.contains('check')) {
 		const itemKey =
